@@ -51,17 +51,14 @@
                     </h1>
                     <div class="subheading mb-5">
                         727 Martin Luther King Drive west · Cincinnati, OH 45220 · 
-                        <a href="mailto:galisy@mail.uc.edu">galisy@mail.uc.edu</a>
+                        <div id="email" onclick="showhideEmail()">Show my email</div>
+                        <script src="js/email.js" defer></script>
                     </div>
                     <p class="lead mb-5">As a data engineer with one year of experience, I bring a solid foundation in designing, implementing, and maintaining data pipelines to support business intelligence and analytics initiatives. With expertise in data modeling, ETL processes, and database management, I have contributed to the development of scalable and efficient data infrastructure. </p>
                     <div class="social-icons">
                         <a class="social-icon" href="https://github.com/sai-divakar-reddy-gali"><i class="fab fa-linkedin-in"></i></a>
                         <a class="social-icon" href="https://www.linkedin.com/in/saidivakarreddygali/"><i class="fab fa-github"></i></a>
                         <a href="https://sai-divakar-reddy-gali.github.io/waph.html" target="_blank">Click here to view Web Application Programming and course work</a>
-                    </div>
-                    <div class="mt-4">
-                        <div id="email" onclick="showhideEmail()">Show my email</div>
-                        <script src="js/email.js" defer></script>
                     </div>
                     <div class="mt-4">
                         <div id="digit-clock"></div>
@@ -191,7 +188,7 @@
 
             // function to display Digital clock
             function displayTime() {
-                document.getElementById('digit-clock').innerHTML = "Current time: " + new Date();
+                $('#digit-clock').html("Current time: " + new Date());
             }
             setInterval(displayTime, 500);
 
