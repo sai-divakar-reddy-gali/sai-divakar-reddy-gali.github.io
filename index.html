@@ -52,7 +52,7 @@
                     <div class="subheading mb-5">
                         727 Martin Luther King Drive west · Cincinnati, OH 45220 · 
                         <div id="email" onclick="showhideEmail()">Show my email</div>
-                        <script src="js/email.js" defer></script>
+                        <!-- <script src="js/email.js" defer></script> -->
                     </div>
                     <p class="lead mb-5">As a data engineer with one year of experience, I bring a solid foundation in designing, implementing, and maintaining data pipelines to support business intelligence and analytics initiatives. With expertise in data modeling, ETL processes, and database management, I have contributed to the development of scalable and efficient data infrastructure. </p>
                     <div class="social-icons">
@@ -185,6 +185,20 @@
         <!-- Core theme JS-->
         <script src="js/scripts.js"></script>
         <script type="text/javascript">
+
+            //fucntion to show/ hide email
+            var shown = false;
+
+            function showhideEmail() {
+                if (shown) {
+                    $('#email').html("Show my email");
+                    shown = false;
+                } else {
+                    var myemail = "<a href='mailto:galisy@mail.uc.edu'>galisy@mail.uc.edu</a>";
+                    $('#email').html(myemail);
+                    shown = true;
+                }
+            }
 
             // function to display Digital clock
             function displayTime() {
@@ -387,6 +401,6 @@
               );
             }
             ReactDOM.render(<Counter />, document.getElementById('root'));
-          </script>
+        </script>
     </body>
 </html>
